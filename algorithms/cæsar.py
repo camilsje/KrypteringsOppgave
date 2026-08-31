@@ -1,5 +1,5 @@
-from constants import ALFABETH
-from interfaces.krypteringsAlgoritmer import Encrypting
+from constants import ALPHABET
+from interfaces.algorithms import Encrypting
 
 class CæsarAlgorithm(Encrypting):
     def __init__(self, shift: int):
@@ -8,8 +8,8 @@ class CæsarAlgorithm(Encrypting):
         Arg:
             shift (int): Antall plasser bokstavene skal flyttes i alfabetet
         """
-        self.alfabeth = ALFABETH 
-        self.shift = shift
+        self.alfabeth = ALPHABET 
+        self.shift = int(shift)
     
         
     def encrypt(self, text: str) -> str:
@@ -45,20 +45,31 @@ def _shift_char(text: str, shift: int) -> str:
         tekst (str): Teksten som skal krypteres eller dekrypteres
         shift (int): Antall plasser bokstavene skal flyttes
     Returns:
-        str: Den krypterte eller dekrypterte teksten
     """
     new_text = ""
     for char in text:
         if char.isupper():
-            position = ALFABETH.index(char)
-            new_index = ((position + shift)%len(ALFABETH))
-            new_char = ALFABETH[new_index]
+            position = ALPHABET.index(char)
+            new_index = ((position + shift)%len(ALPHABET))
+            new_char = ALPHABET[new_index]
             new_text += new_char
         elif char.islower():
-            position = ALFABETH.index(char.upper())
-            new_index = ((position + shift)%len(ALFABETH))
-            new_char = ALFABETH[new_index]
+            position = ALPHABET.index(char.upper())
+            new_index = ((position + shift)%len(ALPHABET))
+            new_char = ALPHABET[new_index]
             new_text += new_char.lower()
         else:
             new_text += char
     return new_text
+
+
+# I cæsar.py – legg til på slutten
+"""
+if __name__ == "__main__":
+    cipher = CæsarAlgorithm(shift=3)
+    encrypted = cipher.encrypt("Hello")
+    print(f"Encrypted: {encrypted}")
+    
+    decrypted = cipher.decrypt(encrypted)
+    print(f"Decrypted: {decrypted}")
+"""
