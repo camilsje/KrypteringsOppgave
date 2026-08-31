@@ -7,4 +7,7 @@ def write_file(file_path: str, text: str):
     except Exception as e:
         print(f"Det oppstod en feil ved skrving {e}")
 
-#print(skriv_fil("testFil.txt", "hei"))
+
+#For testing
+# if __name__ == "__main__":
+    #print(write_file("testFil.txt", "Hei"))

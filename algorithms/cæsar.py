@@ -61,3 +61,15 @@ def _shift_char(text: str, shift: int) -> str:
         else:
             new_text += char
     return new_text
+
+
+# I cæsar.py – legg til på slutten
+"""
+if __name__ == "__main__":
+    cipher = CæsarAlgorithm(shift=3)
+    encrypted = cipher.encrypt("Hello")
+    print(f"Encrypted: {encrypted}")
+    
+    decrypted = cipher.decrypt(encrypted)
+    print(f"Decrypted: {decrypted}")
+"""

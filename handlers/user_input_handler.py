@@ -1,5 +1,4 @@
 from constants import ALGORITHMS
-from algorithms.cæsar import CæsarAlgorithm
 from utils.read_file import read_file
 from utils.write_file import write_file
 import sys

@@ -15,7 +15,6 @@ def read_file(file_path: str ) -> str:
         print(f"Det oppstod en feil ved lesing {e}")
 
 
-"""
-For å teste funksjonen kommenter ut.
-"""
-#print(les_fil("testFil.txt"))
+#For testing
+# if __name__ == "__main__":
+    #print(read_file("testFil.txt", "Hei"))
