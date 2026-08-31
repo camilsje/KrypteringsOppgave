@@ -1,6 +1,6 @@
-ALFABETH = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z", "Æ", "Ø", "Å"]
+ALPHABET = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z", "Æ", "Ø", "Å"]
 
-from krypteringsAlgoritmer.cæsar import CæsarAlgorithm
+from algorithms.cæsar import CæsarAlgorithm
 ALGORITHMS = {
     "Cæsar": CæsarAlgorithm,
 }

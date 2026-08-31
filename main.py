@@ -1,4 +1,4 @@
-from handlers.userInputHandler import UserInputHandler
+from handlers.user_input_handler import UserInputHandler
 import sys
 
 def main():
@@ -8,20 +8,20 @@ def main():
     print("Du kan når som helst avslutte ved å skrive 'Q'.")
     print("-" *20)
 
-    userInput = UserInputHandler()
+    input_handler = UserInputHandler()
 
     while True:
         #1. Spør om fil
-        text, file_path = userInput.getFilsti()
+        text, file_path = input_handler.get_file_path()
 
         #2. Spør om algoritme
-        algorithm_class = userInput.getAlgoritme()
+        algorithm_class = input_handler.get_algorithm()
 
         #3.Spør om metode
-        metode = userInput.getMetode()
+        metode = input_handler.get_method()
 
         #4Spør om antall hopp, ved utvidelse må dette spørsmålet basere seg på hvilke algoritme det er. 
-        shift = userInput.getShift()
+        shift = input_handler.get_shift()
 
         # Velger algoritme basert på brukerinput, standard brukerinput bør derfor være 
         # algoritme type og dekryptering/encryptering.
@@ -38,10 +38,10 @@ def main():
         print("-"*20)
 
         #6. Skriver innholdet til filen, hvis ønskelig
-        userInput.skrive_til_fil(file_path, f"\n\n Resultatet av krypteringen er: \n{result}")
+        input_handler.write_to_file(file_path, f"\n\n Resultatet av krypteringen er: \n{result}")
 
         #6. Spør brukeren om den har noe mer den ønsker å kryptere
-        userInput.nyRunde()
+        input_handler.new_round()
 
 
 # Sikrer at koden kun kjøres når filen kjøres direkte

@@ -1,4 +1,4 @@
-def les_fil(file_path: str ) -> str:
+def read_file(file_path: str ) -> str:
     """
     Leser innholdet i en fil
     Args:

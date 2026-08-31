@@ -1,4 +1,4 @@
-def skriv_fil(file_path: str, text: str):
+def write_file(file_path: str, text: str):
     try:
         with open(file_path, "a", encoding='utf-8') as file:
             file.write(text)
