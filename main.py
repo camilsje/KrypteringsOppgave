@@ -1,8 +1,9 @@
-from krypteringsAlgoritmer.cæsar import encrypt_or_decrypt
+from krypteringsAlgoritmer.cæsar import CæsarAlgorithm
 
 def main():
+    algorithm = CæsarAlgorithm(shift=3)
     print("Hello World!")
-    print(encrypt_or_decrypt("Hello", 3, "e"))
+    print(algorithm.encrypt("Hello"))
 
 # Sikrer at koden kun kjøres når filen kjøres direkte
 if __name__ == "__main__":
