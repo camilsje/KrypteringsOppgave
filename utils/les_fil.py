@@ -12,7 +12,7 @@ def les_fil(file_path: str ) -> str:
     except FileNotFoundError:
         print (f"Fant ikke filen: {file_path}. Sjekk filbanen")
     except Exception as e:
-        print(f"Det oppstod en feil {e}")
+        print(f"Det oppstod en feil ved lesing {e}")
 
 
 """
