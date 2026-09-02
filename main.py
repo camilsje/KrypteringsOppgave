@@ -28,8 +28,10 @@ def main():
         algorithm = algorithm_class(shift=shift)
         if metode == "d":
             result = algorithm.decrypt(text)
-        else:
+        elif metode == "e":
             result = algorithm.encrypt(text)
+        else:
+            raise ValueError("Ugyldig metode. Velg 'd' for dekryptering eller 'e' for kryptering.")
 
         #5. Printer resultatet i terminalen
         print("-"*20)

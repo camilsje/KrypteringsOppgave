@@ -24,3 +24,4 @@ Kan enkelt legge til nye algoritmer i algorithms mappen, som arver klasser fra a
 
 ## Skisser fra arbeidsprosessen
 ![Alt-tekst](ReadmeBilde.png)
+![Alt-tekst](ReadmeBilde1.png)

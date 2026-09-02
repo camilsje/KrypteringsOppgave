@@ -8,7 +8,6 @@ class CæsarAlgorithm(Encrypting):
         Arg:
             shift (int): Antall plasser bokstavene skal flyttes i alfabetet
         """
-        self.alfabeth = ALPHABET 
         self.shift = int(shift)
     
         
