@@ -9,12 +9,12 @@ def read_file(file_path: str ) -> str | None:
     try:
         with open(file_path, "r", encoding='utf-8') as file:
             return file.read()
-    except FileNotFoundError:
-        print (f"Fant ikke filen: {file_path}. Sjekk filbanen")
-        return None
+    except FileNotFoundError as e: 
+        raise FileNotFoundError (f"Fant ikke filen: {file_path}. Sjekk filbanen") from e
+        
     except Exception as e:
-        print(f"Det oppstod en feil ved lesing {e}")
-        return None
+        raise Exception(f"Det oppstod en feil ved lesing {e}") from e
+        
 
 
 #For testing
