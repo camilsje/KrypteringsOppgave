@@ -1,4 +1,4 @@
-def read_file(file_path: str ) -> str:
+def read_file(file_path: str ) -> str | None:
     """
     Leser innholdet i en fil
     Args:
@@ -11,8 +11,10 @@ def read_file(file_path: str ) -> str:
             return file.read()
     except FileNotFoundError:
         print (f"Fant ikke filen: {file_path}. Sjekk filbanen")
+        return None
     except Exception as e:
         print(f"Det oppstod en feil ved lesing {e}")
+        return None
 
 
 #For testing

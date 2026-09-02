@@ -1,8 +1,9 @@
-from constants import ALGORITHMS
+from registry import ALGORITHMS
 from utils.read_file import read_file
 from utils.write_file import write_file
 import sys
 from typing import Tuple
+from interfaces.algorithms import Encrypting
 
 
 def terminate(user_input):
@@ -23,11 +24,11 @@ class UserInputHandler:
             file_path = input("Skriv inn filnavnet til filen du vil kryptere/dekryptere: ")
             terminate(file_path)
             text = read_file(file_path)
-            if text:
+            if text is not None: 
                 return text, file_path
             print("Ugyldig filsti. Vennligst prøv igjen.")
 
-    def get_algorithm(self) -> type:
+    def get_algorithm(self) -> type[Encrypting]:
         """
         Henter den riktige krypterings algoritmen fra en liste over tilgjengelige algoritmer.
         Returns:
