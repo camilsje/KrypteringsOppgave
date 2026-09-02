@@ -26,7 +26,6 @@ class UserInputHandler:
             text = read_file(file_path)
             if text is not None: 
                 return text, file_path
-            print("Ugyldig filsti. Vennligst prøv igjen.")
 
     def get_algorithm(self) -> type[Encrypting]:
         """

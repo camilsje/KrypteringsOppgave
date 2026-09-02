@@ -10,10 +10,12 @@ def read_file(file_path: str ) -> str | None:
         with open(file_path, "r", encoding='utf-8') as file:
             return file.read()
     except FileNotFoundError as e: 
-        raise FileNotFoundError (f"Fant ikke filen: {file_path}. Sjekk filbanen") from e
-        
+        print(f"Fant ikke filen: {file_path}. Sjekk filbanen og prøv igjen")
+        return None
+
     except Exception as e:
-        raise Exception(f"Det oppstod en feil ved lesing {e}") from e
+        print(f"Det oppstod en feil ved lesing {e}")
+        return None
         
 
 
